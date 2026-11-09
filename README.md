@@ -4,7 +4,7 @@
 
 ### [Play in your browser](https://merickiziltas.github.io/kraken-blast-unity-puzzle-game/)
 
-<a href="https://merickiziltas.github.io/kraken-blast-unity-puzzle-game/"><img src="Preview/menu.png" alt="Kraken Blast title screen with a treasure chest and an octopus" width="240"></a> <img src="Preview/gameplay.png" alt="Gem board with a powder keg and three anchor targets" width="240">
+<a href="https://merickiziltas.github.io/kraken-blast-unity-puzzle-game/"><img src="Preview/menu.png" alt="Kraken Blast title screen with a treasure chest and an octopus" width="240"></a> <img src="Preview/gameplay.png" alt="Gem board with cannon and powder keg hints above two rows of anchor targets" width="240">
 
 ## How to play
 
@@ -17,7 +17,7 @@ Tap a group of **two or more** matching gems that touch horizontally or vertical
 | 6+ gems | Create a powder keg that clears a square area. |
 | Adjacent special pieces | Tap to combine them into a larger blast. |
 
-The ten expeditions introduce breakable jugs, anchors that need a special blast, and treasure chests that open before yielding their gold.
+Ivory silhouettes on colored tiles preview the cannon or powder keg that a group will create. A freestanding cannon or keg is ready to activate. Anchors need a special blast, jugs crack before breaking, and a locked chest must be opened before its coins can be collected.
 
 ## Under the deck
 
@@ -35,4 +35,4 @@ For a local browser build, install Unity's **Web Build Support** module and choo
 
 ## Credits
 
-Project by **Ahmet Meriç Kızıltaş**. The pirate illustration, sprite designs, and synthesized audio were produced with AI assistance. Animation uses **DOTween** by Daniele Giardini (Demigiant). [Third-party notices](THIRD_PARTY_NOTICES.md)
+Project by **Ahmet Meriç Kızıltaş**. The pirate illustration, sprite designs, and synthesized audio were produced with AI assistance. The ten supplied level layouts are included with permission. Animation uses **DOTween** by Daniele Giardini (Demigiant). [Third-party notices](THIRD_PARTY_NOTICES.md)

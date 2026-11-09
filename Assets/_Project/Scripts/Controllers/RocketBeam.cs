@@ -7,12 +7,12 @@ namespace KrakenCache.Controllers
     public sealed class RocketBeam : MonoBehaviour
     {
         private LineRenderer core, halo;
-        private readonly Color coreColor = new Color(1, .98f, .58f, .95f);
-        private readonly Color haloColor = new Color(1, .66f, .035f, .42f);
+        private readonly Color coreColor = new Color(1, .87f, .63f, .70f);
+        private readonly Color haloColor = new Color(1, .67f, .32f, .22f);
         public void Setup(Material material, Vector3 origin, float cellSize)
         {
-            halo = Line("Halo", material, origin, cellSize*.3f, haloColor, 102);
-            core = Line("Core", material, origin, cellSize*.065f, coreColor, 107);
+            halo = Line("Halo", material, origin, cellSize*.14f, haloColor, 102);
+            core = Line("Core", material, origin, cellSize*.046f, coreColor, 107);
         }
         private LineRenderer Line(string name, Material material, Vector3 origin, float width, Color color, int order)
         {

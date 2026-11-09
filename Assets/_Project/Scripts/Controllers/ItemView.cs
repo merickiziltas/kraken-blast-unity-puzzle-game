@@ -38,12 +38,12 @@ namespace KrakenCache.Controllers
                 doors.sprite = assets.chaliceBoxDoors;
                 for (int i = 0; i < ChaliceBoxItem.TargetChalices; i++)
                 {
-                    var cup = new GameObject("ShelfChalice");
+                    var cup = new GameObject("ChestCoin");
                     cup.transform.SetParent(transform, false);
-                    cup.transform.localPosition = new Vector3((i % 5 - 2) * 0.44f, i < 5 ? 0.57f : -0.67f, 0);
+                    cup.transform.localPosition = new Vector3((i % 5 - 2) * 0.44f, i < 5 ? 0.20f : -0.55f, 0);
                     var cupRenderer = cup.AddComponent<SpriteRenderer>();
                     cupRenderer.sprite = assets.chalice;
-                    if (assets.chalice != null) cup.transform.localScale = Vector3.one * 0.55f / assets.chalice.bounds.size.y;
+                    if (assets.chalice != null) cup.transform.localScale = Vector3.one * 0.45f / assets.chalice.bounds.size.y;
                     chalices.Add(cupRenderer);
                 }
             }
