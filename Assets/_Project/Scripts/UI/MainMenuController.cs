@@ -17,6 +17,9 @@ namespace KrakenCache.UI
         [Header("Assets")]
         [SerializeField] private GameAssets assets;
 
+        private Button chooseLevelButton;
+        private GameObject levelPicker;
+
         private void Awake()
         {
             ResolveAssets();
@@ -45,6 +48,10 @@ namespace KrakenCache.UI
             if (!Application.IsPlaying(gameObject)) return;
             GameAudio.Prepare();
             PrepareButtonVisual();
+            var pickerAnchor = new Vector2(.5f, .48f);
+            chooseLevelButton = LevelSelectView.MakeButton(transform, "ChooseLevel", "Choose level",
+                pickerAnchor, new Vector2(0, -111), new Vector2(320, 83), 36, assets, OpenLevelPicker);
+            levelPicker = LevelSelectView.Create(transform, assets, OnLevelSelected, CloseLevelPicker);
             UpdateMenuVisuals();
 
             if (levelButton != null)
@@ -118,25 +125,44 @@ namespace KrakenCache.UI
                 backgroundImage.sprite = assets.menuBackground;
             }
 
-            if (GameProgress.IsAllLevelsFinished)
-            {
-                if (levelButtonText != null) levelButtonText.text = "All loot secured";
-                if (levelButton != null) levelButton.interactable = false;
-            }
-            else
-            {
-                if (levelButtonText != null) levelButtonText.text = $"Set sail  /  {GameProgress.LastPlayedLevel:00}";
-                if (levelButton != null) levelButton.interactable = true;
-            }
+            int level = GameProgress.CurrentLevel;
+            if (levelButtonText != null)
+                levelButtonText.text = level > GameProgress.MaxLevel ? "Play again" : $"Set sail  /  {level:00}";
         }
 
         private void OnLevelClicked()
         {
-            if (!GameProgress.IsAllLevelsFinished)
-            {
-                GameAudio.Play(SoundCue.UiTap);
-                SceneManager.LoadScene("LevelScene");
-            }
+            if (GameProgress.CurrentLevel > GameProgress.MaxLevel)
+                GameProgress.SelectLevel(1);
+            LaunchLevel();
+        }
+
+        private void OpenLevelPicker()
+        {
+            GameAudio.Play(SoundCue.UiTap);
+            levelPicker.SetActive(true);
+            if (levelButton != null) levelButton.interactable = false;
+            chooseLevelButton.interactable = false;
+        }
+
+        private void CloseLevelPicker()
+        {
+            GameAudio.Play(SoundCue.UiTap);
+            levelPicker.SetActive(false);
+            if (levelButton != null) levelButton.interactable = true;
+            chooseLevelButton.interactable = true;
+        }
+
+        private void OnLevelSelected(int level)
+        {
+            GameProgress.SelectLevel(level);
+            LaunchLevel();
+        }
+
+        private static void LaunchLevel()
+        {
+            GameAudio.Play(SoundCue.UiTap);
+            SceneManager.LoadScene("LevelScene");
         }
     }
 }

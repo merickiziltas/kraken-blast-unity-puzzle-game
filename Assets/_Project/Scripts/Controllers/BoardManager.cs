@@ -59,8 +59,10 @@ namespace KrakenCache.Controllers
         }
         private void Start()
         {
-            if (GameProgress.IsAllLevelsFinished) UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
-            else InitializeLevel(GameProgress.LastPlayedLevel);
+            if (GameProgress.CurrentLevel > GameProgress.MaxLevel)
+                UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+            else
+                InitializeLevel(GameProgress.CurrentLevel);
         }
 
         public void InitializeLevel(int levelNumber)

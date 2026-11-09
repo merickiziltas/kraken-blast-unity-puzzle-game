@@ -7,6 +7,7 @@ namespace KrakenCache.Data
     {
         private const string LevelPrefKey = "KC_Expedition";
         public const int MaxLevel = 10;
+        private static int? selectedLevel;
 
         public static event Action<int> OnLevelChanged;
 
@@ -15,21 +16,41 @@ namespace KrakenCache.Data
             get => PlayerPrefs.GetInt(LevelPrefKey, 1);
             set
             {
-                int clamped = Mathf.Clamp(value, 1, MaxLevel + 1);
-                PlayerPrefs.SetInt(LevelPrefKey, clamped);
-                PlayerPrefs.Save();
-                OnLevelChanged?.Invoke(clamped);
+                selectedLevel = null;
+                SaveProgress(Mathf.Clamp(value, 1, MaxLevel + 1));
+                OnLevelChanged?.Invoke(CurrentLevel);
             }
         }
 
         public static bool IsAllLevelsFinished => LastPlayedLevel > MaxLevel;
+        public static int CurrentLevel => selectedLevel ?? LastPlayedLevel;
+
+        public static void SelectLevel(int level)
+        {
+            selectedLevel = Mathf.Clamp(level, 1, MaxLevel);
+            OnLevelChanged?.Invoke(CurrentLevel);
+        }
 
         public static void CompleteCurrentLevel()
         {
-            if (LastPlayedLevel <= MaxLevel)
-            {
-                LastPlayedLevel++;
-            }
+            int completedLevel = CurrentLevel;
+            if (completedLevel > MaxLevel) return;
+
+            // A chosen expedition can continue in this session without skipping
+            // unbeaten levels or erasing the saved campaign.
+            if (selectedLevel.HasValue)
+                selectedLevel = completedLevel < MaxLevel ? completedLevel + 1 : (int?)null;
+
+            if (completedLevel == LastPlayedLevel)
+                SaveProgress(completedLevel + 1);
+
+            OnLevelChanged?.Invoke(CurrentLevel);
+        }
+
+        private static void SaveProgress(int level)
+        {
+            PlayerPrefs.SetInt(LevelPrefKey, level);
+            PlayerPrefs.Save();
         }
 
         public static void ResetProgress()

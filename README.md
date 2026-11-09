@@ -10,6 +10,8 @@
 
 Tap a group of **two or more** matching gems that touch horizontally or vertically. Clear the targets before running out of moves.
 
+Use **Choose level** on the main menu to play any of the ten levels. After finishing the campaign, **Play again** starts at level 1. Both options keep your saved campaign progress.
+
 | Match | Result |
 | --- | --- |
 | 2–3 gems | Clear the group. |
