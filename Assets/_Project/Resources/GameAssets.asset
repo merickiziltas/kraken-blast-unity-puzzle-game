@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b4882b75c900449cc9e23a5bff0f1, type: 3}
+  m_Name: GameAssets
+  m_EditorClassIdentifier: Assembly-CSharp::KrakenCache.Data.GameAssets
+  redCube: {fileID: 8166710274925509176, guid: 71bf3e29cf4b4a2f97cea18e3b555085, type: 3}
+  greenCube: {fileID: -6099873399732076034, guid: 2dfc73edac7e48648d6df1e63bfdd12c, type: 3}
+  blueCube: {fileID: -2615874204119335, guid: 4ee8a74343b04e77b752ddee50713f08, type: 3}
+  yellowCube: {fileID: -8425141836431729757, guid: 7e9fdc6c72194d88b4381e3a999743b7, type: 3}
+  redRocketHint: {fileID: -4162601588504768772, guid: ac58e50abc904c0097e591d748bf6aa8, type: 3}
+  greenRocketHint: {fileID: -8149426069742796037, guid: 65c6d235e4d14283ad2db93b94dc5a7c, type: 3}
+  blueRocketHint: {fileID: 8853254876290271475, guid: 32992319ff4e4313abc5d87b61fd7229, type: 3}
+  yellowRocketHint: {fileID: 6090080599973395561, guid: 715016238e3f4cf9af44c0b094b08fde, type: 3}
+  redTntHint: {fileID: 2184194870819415236, guid: 146f8737d2ca4a17b4f7beb879897a6c, type: 3}
+  greenTntHint: {fileID: -3311934926304285867, guid: a021af02d17c447c9e28252a001594ad, type: 3}
+  blueTntHint: {fileID: -6398920596853824910, guid: ef7ef32cd7384b93a0a2125b86790633, type: 3}
+  yellowTntHint: {fileID: -2969105743741883941, guid: 76b9e8c5a67245e9910acedab04bf6a0, type: 3}
+  horizontalRocket: {fileID: 1184650260280522132, guid: 6ef61d648dab40348266ca7754fbf976, type: 3}
+  horizontalRocketPartLeft: {fileID: 8611318781296695245, guid: a7ec9446d24e4104865b3ff53ca5749b, type: 3}
+  horizontalRocketPartRight: {fileID: -4731576832940087401, guid: 54b1e0f3ba054b629d2d11c93574f231, type: 3}
+  verticalRocket: {fileID: 6449952862585347896, guid: 64764f9099af4e9aa484cebd25d90d62, type: 3}
+  verticalRocketPartBottom: {fileID: -4697989437084310921, guid: ff50d6743a1d49c5863a056f6d2cb6e8, type: 3}
+  verticalRocketPartTop: {fileID: 51141016974189086, guid: 13313cc73e6f49c2b8737822edac667f, type: 3}
+  tnt: {fileID: -8136218936520485124, guid: 747f94e47e514e7fbe433572453763e4, type: 3}
+  stone: {fileID: 5725184139431673129, guid: b79be71942bf4ca2811de4e99878954e, type: 3}
+  vaseFull: {fileID: -4678962038349899921, guid: 4546dfd2ac5b42acbd2d0c73027b9786, type: 3}
+  vaseDamaged: {fileID: -1432975368721100300, guid: 49fa1d06eda7481c982b40b7c9ce8a79, type: 3}
+  chaliceBoxBg: {fileID: 7642983982991545956, guid: a2d134d92b254c75ae08606736d030c2, type: 3}
+  chaliceBoxDoors: {fileID: -7424629744233440696, guid: 836e1f43576b413a9ae0885bd057d26e, type: 3}
+  chalice: {fileID: -181104677851366788, guid: f5bed7e5893e4af5b242342c3c0082bf, type: 3}
+  gridBackground: {fileID: -6210635282160400736, guid: b270ad750e98456287e2c8678a97ba95, type: 3}
+  topUi: {fileID: 8386317704158664464, guid: 0df75d28976041e5bbac4f7636c56239, type: 3}
+  goalCheck: {fileID: 8096300645454206010, guid: 862ce9a8d7bf4eb6b8b7ad8ec482953b, type: 3}
+  celebrationStar: {fileID: 4815476061570213978, guid: 3db4d7177aa14318b7b66ae89b0adbe0, type: 3}
+  popupBase: {fileID: -5841618373693518811, guid: 2c7c821f05914d5daabb9ab158066aaa, type: 3}
+  popupRibbon: {fileID: -363085424406757488, guid: b448f875082d47799a6ccf3e58e68826, type: 3}
+  closeButton: {fileID: 6220736335902542612, guid: 52d78103cb34463d8cecd23e1266e021, type: 3}
+  menuButton: {fileID: 2530564911472380330, guid: 270b2f9353384a25b23d0c751d269116, type: 3}
+  menuButtonFrame: {fileID: 5788818527411280271, guid: 2d868f30c49a4893bfdeba581003603e, type: 3}
+  menuBackground: {fileID: -7443756053782179069, guid: 6a6b0942ed8b43ae84baf1f7e5523e80, type: 3}
+  particleRed: {fileID: 8635282560227039426, guid: 25c64cf4d12946909789a7fbf450e210, type: 3}
+  particleGreen: {fileID: 3823634399010047068, guid: 734eb5b5a8954130aeb215e9f11cc6ed, type: 3}
+  particleBlue: {fileID: -600494540707355758, guid: 8003f03090b5416dbf0340d19ff3b6e9, type: 3}
+  particleYellow: {fileID: 6910005400417552955, guid: 8bb11729089648ea86fd316b20134c3f, type: 3}
+  particleSmoke: {fileID: -4644287431084688493, guid: f67785cbc80b4205a21fdae4316321ea, type: 3}
+  particleStar: {fileID: -1100984736764964828, guid: 5c9319840db9471c9b776b63613fbc57, type: 3}
+  starMaterial: {fileID: 2100000, guid: b9326b129a1ca8543bdc82a6b7786170, type: 2}
+  stoneParticles:
+  - {fileID: -2203629019558354351, guid: b64160cae6da424e9dd712c0a606a058, type: 3}
+  - {fileID: 7798741131455143084, guid: 30b3f5d468654fc4995bf8783995e2f9, type: 3}
+  - {fileID: 4097111511846903190, guid: 07733da079c84508a690b6b848fbb2c0, type: 3}
+  vaseParticles:
+  - {fileID: 4095080387558074076, guid: 889d147062c14c2bb1c0fbd57edee568, type: 3}
+  - {fileID: 6406247513108631659, guid: 2cac03ca97ad4d5185a2f17349ca7c7f, type: 3}
+  - {fileID: -2350886445216773880, guid: 297330996c4c4f96bb92b17239112124, type: 3}
+  doorParticles:
+  - {fileID: 3658262366090827233, guid: eef1cc9121e94f9cbbfc8891dd46bf65, type: 3}
+  - {fileID: -6253719457004036166, guid: 6e222f31cd3a400f81bef15fe52e5263, type: 3}
+  - {fileID: -1156461269830941494, guid: a3e459aa26ce41e0b36b1b7feb4d00b2, type: 3}
+  - {fileID: 2291987453466907406, guid: 2247b2922ee74644924363fc71a4448b, type: 3}
+  - {fileID: 1587601489177917366, guid: 0e95a19a8bf04e06a8fe35dd5cdfc4f5, type: 3}
+  - {fileID: 9210670616763497589, guid: 5f19cb761bba4eed969c52a543dfea41, type: 3}
+  - {fileID: 1452857463581040857, guid: 54d8c61d4bdb42d2b5c1d7f22b427dd4, type: 3}
+  - {fileID: -4331240356581166131, guid: f85a269e3dc642e6bda9f75d2f135c62, type: 3}
+  - {fileID: -3734815318763610706, guid: 18db91619e634802b3bb9060c2d9e2de, type: 3}
+  - {fileID: -1563582140481139095, guid: 2fc4cb2fb63142b2ab0d74c3c418c1de, type: 3}
+  boxParticles:
+  - {fileID: 6770140360960781578, guid: 21bb2f5980e4435da01708a7c08a279c, type: 3}
+  - {fileID: -4290281367078989091, guid: df2d42ef2d554f49b018729a85c638d8, type: 3}
+  - {fileID: 2613862393637530711, guid: 9b0540b234864e759f327f4a82662763, type: 3}
+  - {fileID: 8656253850458309695, guid: d4817234a5274dc398e59fd3d3767149, type: 3}
+  - {fileID: -6503174540981057365, guid: 71a3e4b9d2aa4f6d8df2485d8d20f3ab, type: 3}
+  tntParticles:
+  - {fileID: 7673536227761511531, guid: 368516c39da348c1b2bf11f2c1857a69, type: 3}
+  - {fileID: -5284336289360315941, guid: 7662cb4a72a54bacaff5737aa183dd09, type: 3}
