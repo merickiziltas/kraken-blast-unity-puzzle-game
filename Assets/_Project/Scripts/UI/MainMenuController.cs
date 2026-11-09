@@ -78,7 +78,7 @@ namespace KrakenCache.UI
             var gold = new Color32(255, 214, 147, 255);
             MakeLabel("Eyebrow", "T H E   S H I P W R E C K   C O V E", .81f, 33, gold);
             MakeLabel("TitleTop", "KRAKEN", .742f, 122, new Color32(255, 237, 194, 255));
-            MakeLabel("TitleBottom", "CACHE", .676f, 122, gold);
+            MakeLabel("TitleBottom", "BLAST", .676f, 122, gold);
             MakeLabel("Tagline", "A pirate treasure puzzle", .603f, 39, new Color32(224, 230, 238, 255));
         }
 

@@ -9,7 +9,7 @@ namespace KrakenCache.Editor
     {
         private int selectedLevel = 1;
 
-        [MenuItem("Kraken Cache/Set Level...", false, 1)]
+        [MenuItem("Kraken Blast/Set Level...", false, 1)]
         public static void ShowWindow()
         {
             var window = GetWindow<KrakenCacheEditorWindow>("Kraken Level Tool");
@@ -25,7 +25,7 @@ namespace KrakenCache.Editor
         private void OnGUI()
         {
             GUILayout.Space(10);
-            EditorGUILayout.LabelField("Kraken Cache - Level Manager", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Kraken Blast - Level Manager", EditorStyles.boldLabel);
             EditorGUILayout.HelpBox(
                 $"Current Persisted Level: {(GameProgress.IsAllLevelsFinished ? "All Finished (11)" : $"Level {GameProgress.LastPlayedLevel}")}",
                 MessageType.Info);
@@ -58,16 +58,16 @@ namespace KrakenCache.Editor
             EditorGUILayout.EndHorizontal();
         }
 
-        [MenuItem("Kraken Cache/Quick Set/Level 1")]
+        [MenuItem("Kraken Blast/Quick Set/Level 1")]
         private static void SetLevel1() => GameProgress.LastPlayedLevel = 1;
 
-        [MenuItem("Kraken Cache/Quick Set/Level 5")]
+        [MenuItem("Kraken Blast/Quick Set/Level 5")]
         private static void SetLevel5() => GameProgress.LastPlayedLevel = 5;
 
-        [MenuItem("Kraken Cache/Quick Set/Level 10")]
+        [MenuItem("Kraken Blast/Quick Set/Level 10")]
         private static void SetLevel10() => GameProgress.LastPlayedLevel = 10;
 
-        [MenuItem("Kraken Cache/Quick Set/Finished")]
+        [MenuItem("Kraken Blast/Quick Set/Finished")]
         private static void SetFinished() => GameProgress.LastPlayedLevel = GameProgress.MaxLevel + 1;
     }
 }

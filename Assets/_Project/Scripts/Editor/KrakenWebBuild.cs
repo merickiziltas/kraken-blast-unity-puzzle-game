@@ -8,7 +8,7 @@ namespace KrakenCache.Editor
 {
     public static class KrakenWebBuild
     {
-        [MenuItem("Kraken Cache/Build Web Demo")]
+        [MenuItem("Kraken Blast/Build Web Demo")]
         public static void Build()
         {
             if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL, BuildTarget.WebGL))

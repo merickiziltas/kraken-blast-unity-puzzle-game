@@ -15,7 +15,7 @@ namespace KrakenCache.Editor
             EditorApplication.delayCall += EnsureAssetsBuilt;
         }
 
-        [MenuItem("Kraken Cache/Rebuild Asset Registry", false, 20)]
+        [MenuItem("Kraken Blast/Rebuild Asset Registry", false, 20)]
         public static void EnsureAssetsBuilt()
         {
             var assets = AssetDatabase.LoadAssetAtPath<GameAssets>(AssetPath);
